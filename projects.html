@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faith Chepkemoi</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Reusable Navbar -->
+  <template id="navbar-template">
+    <nav class="navbar">
+      <div class="navbar__brand">Faith Chepkemoi</div>
+      <button class="navbar__toggle" aria-label="Toggle navigation">
+        <span class="navbar__toggle-icon">☰</span>
+      </button>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+        <li class="navbar__item"><a href="projects.html" class="navbar__link">Projects</a></li>
+        <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+    </nav>
+  </template>
+
+  <!-- Projects Content -->
+  <header>
+    <div id="navbar-root"></div>
+  </header>
+  <section class="projects">
+    <h2 class="section__title">My Projects</h2>
+    <div class="projects__grid">
+      <template id="project-card-template">
+        <div class="project-card">
+          <h3 class="project-card__title"></h3>
+          <p class="project-card__description"></p>
+          <a class="project-card__link" href="#" target="_blank">View Project</a>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
