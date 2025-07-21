@@ -55,7 +55,7 @@
             Final-year Bachelor of Science in Software Engineering student at the University of Eastern Africa, Baraton.
             Skilled Graphic Designer and UI/UX expert. Founder of Feighth Arts Beauty Parlor and Co-Founder of Sproutvibe.
           </p>
-          <a href="./public/Faith.pdf" class="hero__resume-button" download rel="noopener">Download Resume</a>
+          <a href="/public/Faith.pdf" class="hero__resume-button" download rel="noopener">Download Resume</a>
         </div>
         <div class="hero__photo-container">
           <img src="/public/Faith.jpg" alt="Faith Chepkemoi" class="hero__photo">
