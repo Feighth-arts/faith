@@ -4,31 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faith Chepkemoi - Experience</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="experience.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar" role="navigation">
-    <div class="navbar__brand">Faith Chepkemoi</div>
-    <ul class="navbar__menu">
-      <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
-      <li class="navbar__item"><a href="projects.html" class="navbar__link">Projects</a></li>
-      <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
-      <li class="navbar__item"><a href="experience.html" class="navbar__link navbar__link--active">Experience</a></li>
-    </ul>
-  </nav>
+  <!-- Reusable Navbar Template -->
+  <template id="navbar-template">
+    <nav class="navbar">
+      <div class="navbar__brand">Faith Chepkemoi</div>
+      <button class="navbar__toggle" aria-label="Toggle navigation">
+        <span class="navbar__toggle-icon">☰</span>
+      </button>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+        <li class="navbar__item"><a href="experience.html" class="navbar__link">Experience</a></li>
+        <li class="navbar__item"><a href="projects.html" class="navbar__link">Projects</a></li>
+        <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+    </nav>
+  </template>
+
+  <!-- Reusable Footer Template -->
+  <template id="footer-template">
+    <footer class="footer">
+      <div class="footer__socials">
+        <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+      <p class="footer__copyright">Faith Chepkemoi ©2025</p>
+    </footer>
+  </template>
+
+  <div id="navbar-root"></div>
+
   <section class="experience">
     <h2 class="section__title">Experience</h2>
     <div class="experience__timeline">
-      <div class="timeline__thread"></div>
-      <!-- Timeline Card 1 -->
       <div class="timeline__item">
-        <div class="timeline__loop"></div>
+        <div class="timeline__dot"></div>
         <div class="timeline__content">
           <div class="timeline__header">
-            <h3 class="timeline__company">Xiracom Limited</h3>
+            <div class="timeline__company-role-row">
+              <span class="timeline__company">Xiracom Limited</span>
+              <span class="timeline__pipe">|</span>
+              <span class="timeline__role">Software Engineering Attaché</span>
+            </div>
             <span class="timeline__date">May 2024 - July 2024</span>
           </div>
-          <div class="timeline__role">Software Engineering Attaché</div>
           <ul class="timeline__achievements">
             <li>Enhanced React skills on the EAVI Portfolio project (not this portfolio).</li>
             <li>Managed CPanel and WordPress for EAVI’s initial setup before switching to React.</li>
@@ -36,30 +67,26 @@
           </ul>
         </div>
       </div>
-      <!-- Timeline Card 2 -->
       <div class="timeline__item">
-        <div class="timeline__loop"></div>
+        <div class="timeline__dot"></div>
         <div class="timeline__content">
           <div class="timeline__header">
-            <h3 class="timeline__company">University of Eastern Africa, Baraton - Google Developer Groups Club</h3>
+            <span class="timeline__company-role"><span class="timeline__company">University of Eastern Africa, Baraton - Google Developer Groups Club</span> <span class="timeline__pipe">|</span> <span class="timeline__role">UI/UX Lead</span></span>
             <span class="timeline__date">Sep 2024 - Present</span>
           </div>
-          <div class="timeline__role">UI/UX Lead</div>
           <ul class="timeline__achievements">
             <li>Led UI/UX design for innovative student projects.</li>
             <li>Collaborated with devs for user-centered integrations.</li>
           </ul>
         </div>
       </div>
-      <!-- Timeline Card 3 -->
       <div class="timeline__item">
-        <div class="timeline__loop"></div>
+        <div class="timeline__dot"></div>
         <div class="timeline__content">
           <div class="timeline__header">
-            <h3 class="timeline__company">University of Eastern Africa, Baraton - Yearbook Department</h3>
+            <span class="timeline__company-role"><span class="timeline__company">University of Eastern Africa, Baraton - Yearbook Department</span> <span class="timeline__pipe">|</span> <span class="timeline__role">Graphic Designer</span></span>
             <span class="timeline__date">Sep 2024 - Present</span>
           </div>
-          <div class="timeline__role">Graphic Designer</div>
           <ul class="timeline__achievements">
             <li>Designed the 2024/2025 Yearbook with striking visuals.</li>
             <li>Optimized layout workflows for timely delivery.</li>
@@ -68,19 +95,8 @@
       </div>
     </div>
   </section>
-  <footer class="footer">
-    <div class="footer__socials">
-      <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" title="FB: Where I pretend to be social">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" title="Insta: My creative chaos">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://x.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" title="X: My tech rants">
-        <i class="fab fa-x-twitter"></i>
-      </a>
-    </div>
-    <p class="footer__copyright">Faith Chepkemoi ©2025</p>
-  </footer>
+
+  <div id="footer-root"></div>
+  <script src="index.js"></script>
 </body>
-</html>
+</html> 
