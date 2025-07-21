@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faith Chepkemoi</title>
+  <title>Faith Chepkemoi - Projects</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Reusable Navbar -->
+  <!-- Reusable Navbar Template -->
   <template id="navbar-template">
     <nav class="navbar">
       <div class="navbar__brand">Faith Chepkemoi</div>
@@ -22,23 +22,84 @@
     </nav>
   </template>
 
-  <!-- Projects Content -->
-  <header>
-    <div id="navbar-root"></div>
-  </header>
+  <!-- Reusable Footer Template -->
+  <template id="footer-template">
+    <footer class="footer">
+      <div class="footer__socials">
+        <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+      <p class="footer__copyright">Faith Chepkemoi ©2025</p>
+    </footer>
+  </template>
+
+  <div id="navbar-root"></div>
+
+  <!-- Projects Section -->
   <section class="projects">
     <h2 class="section__title">My Projects</h2>
     <div class="projects__grid">
-      <template id="project-card-template">
-        <div class="project-card">
-          <h3 class="project-card__title"></h3>
-          <p class="project-card__description"></p>
-          <a class="project-card__link" href="#" target="_blank">View Project</a>
+      <!-- Project 1: Glamease -->
+      <div class="project-card">
+        <div class="project-card__inner">
+          <div class="project-card__front">
+            <img class="project-card__image" src="/public/glamease.png" alt="Glamease Beauty Service Platform">
+            <h3 class="project-card__title">Glamease</h3>
+            <p class="project-card__description">Senior project system connecting beauty service providers to clients</p>
+            <a class="project-card__link" href="https://glamease.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+          <div class="project-card__back">
+            <h3 class="project-card__title">Glamease</h3>
+            <p class="project-card__description">A comprehensive platform currently in development that bridges the gap between beauty service providers and clients. This senior project focuses on creating seamless connections in the beauty industry through innovative technology solutions.</p>
+            <a class="project-card__link" href="https://glamease.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
         </div>
-      </template>
+      </div>
+
+      <!-- Project 2: OPCT -->
+      <div class="project-card">
+        <div class="project-card__inner">
+          <div class="project-card__front">
+            <img class="project-card__image" src="/public/opct.png" alt="OPCT Cash Transfer Application">
+            <h3 class="project-card__title">OPCT</h3>
+            <p class="project-card__description">Cash transfer application mockup for elderly under InuaJamii Program</p>
+            <a class="project-card__link" href="https://opct-ts.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+          <div class="project-card__back">
+            <h3 class="project-card__title">OPCT</h3>
+            <p class="project-card__description">A specialized cash transfer application mockup designed specifically for elderly beneficiaries of Kenya's InuaJamii Program. This project focuses on creating an accessible and user-friendly interface for senior citizens to manage their social protection benefits.</p>
+            <a class="project-card__link" href="https://opct-ts.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: UEAB Innovations Week -->
+      <div class="project-card">
+        <div class="project-card__inner">
+          <div class="project-card__front">
+            <img class="project-card__image" src="/public/ueab-innovation.png" alt="UEAB Innovations Application System">
+            <h3 class="project-card__title">UEAB Innovations</h3>
+            <p class="project-card__description">Proposed application system for UEAB Innovation showcase events</p>
+            <a class="project-card__link" href="https://ueabinnovation.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+          <div class="project-card__back">
+            <h3 class="project-card__title">UEAB Innovations</h3>
+            <p class="project-card__description">A comprehensive application system proposal for the University of Eastern Africa, Baraton's Innovation Week. This project aims to streamline the submission, evaluation, and showcase process for innovative student and faculty projects during the annual innovation events.</p>
+            <a class="project-card__link" href="https://ueabinnovation.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <div id="footer-root"></div>
   <script src="index.js"></script>
 </body>
 </html>
