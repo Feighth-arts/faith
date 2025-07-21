@@ -136,6 +136,7 @@ body {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 }
@@ -698,6 +699,7 @@ body {
   .hero__photo {
     width: 150px;
     height: 150px;
+    object-position: top;
   }
 
   .project-card {
