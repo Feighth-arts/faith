@@ -234,15 +234,15 @@ body {
 @media (max-width: 600px) {
   .experience {
     padding: 1.2rem 0.3rem;
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
   }
   .section__title {
     font-size: 1.4rem;
   }
   .experience__timeline {
-    margin-left: 0.5rem;
-    padding-left: 0.7rem;
+    margin-left: 0.2rem;
+    padding-left: 0.4rem;
   }
   .timeline__item {
     flex-direction: column;
