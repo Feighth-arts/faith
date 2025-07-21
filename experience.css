@@ -190,7 +190,7 @@ body {
 }
 
 .timeline__achievements {
-  list-style: disc inside;
+  list-style: disc outside;
   padding-left: 1.5em;
   font-size: 1rem;
   color: #333;
@@ -198,8 +198,7 @@ body {
 
 .timeline__achievements li {
   margin-bottom: 0.5rem;
-  text-indent: -1em;
-  padding-left: 1em;
+  padding-left: 0.7em;
 }
 
 .footer {
@@ -235,6 +234,8 @@ body {
 @media (max-width: 600px) {
   .experience {
     padding: 1.2rem 0.3rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
   }
   .section__title {
     font-size: 1.4rem;
