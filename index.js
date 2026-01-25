@@ -91,6 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
         icon: 'fab fa-css3-alt'
       },
       {
+        title: 'Bootstrap',
+        description: 'Creating responsive, mobile-first websites with pre-built CSS components and utilities.',
+        icon: 'fab fa-bootstrap'
+      },
+      {
+        title: 'Python',
+        description: 'Developing backend applications, data analysis, and automation scripts.',
+        icon: 'fab fa-python'
+      },
+      {
+        title: 'Django',
+        description: 'Building robust web applications with Python-based framework for rapid development.',
+        icon: 'fas fa-server'
+      },
+      {
         title: 'Flutter',
         description: 'Developing cross-platform mobile applications with a single codebase.',
         icon: 'fas fa-mobile-alt'
@@ -125,6 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Glamease',
         description: 'A senior project in progress, connecting beauty service providers with clients in Kenya through a user-friendly web platform.',
         link: 'https://glamease.vercel.app/',
+        image: '/public/glamease.png'
+      },
+      {
+        title: 'EAVI College Website',
+        description: 'A professional college website built using WordPress and managed through cPanel for content management and hosting.',
+        link: '#',
         image: '/public/glamease.png'
       },
       {
