@@ -290,17 +290,6 @@ body {
   pointer-events: none; /* Block interactions to allow overlay clicks */
 }
 
-.pdf-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  transition: transform 0.6s ease;
-}
-
-.pdf-card:hover .pdf-card__image {
-  transform: scale(1.05);
-}
 
 .pdf-card__overlay {
   position: absolute;
