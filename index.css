@@ -853,8 +853,17 @@ body {
   }
 
   .project-card {
-    height: auto;
-    min-height: 380px;
+    height: 580px;
+  }
+
+  .project-card__content--back {
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+
+  .project-card__uiux-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
 
   .project-card__image-wrapper {
