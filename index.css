@@ -287,9 +287,42 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-  pointer-events: none; /* Block interactions to allow overlay clicks */
+  pointer-events: none;
 }
 
+.pdf-card__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s ease;
+}
+
+.pdf-card:hover .pdf-card__cover {
+  transform: scale(1.04);
+}
+
+.pdf-card__open-hint {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255, 44, 79, 0.9);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  letter-spacing: 0.3px;
+}
+
+.pdf-card:hover .pdf-card__open-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .pdf-card__overlay {
   position: absolute;
