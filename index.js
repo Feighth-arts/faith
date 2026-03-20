@@ -137,28 +137,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.projects__grid')) {
     const projects = [
       {
+        title: 'Signiqe',
+        description: 'A modern professional web application developed for Signiqe to establish their digital presence.',
+        uiuxDescription: '<ul><li><strong>Problem:</strong> Corporate websites often look cluttered, confusing visitors and making them leave.</li><li><strong>My Approach:</strong> I kept the design very clean with lots of white space. By picking just one main color scheme, I made sure the important buttons naturally stand out so users know exactly where to click.</li><li><strong>User Flow:</strong> See the homepage &rarr; Read main services &rarr; See the standout button &rarr; Sign up easily.</li></ul>',
+        link: 'https://signiqe.com/',
+        image: '/public/signiqe.png'
+      },
+      {
         title: 'Glamease',
         description: 'A senior project in progress, connecting beauty service providers with clients in Kenya through a user-friendly web platform.',
-        link: 'https://glamease.vercel.app/',
+        uiuxDescription: '<ul><li><strong>Problem:</strong> Booking a local beauty salon can be stressful and disorganized over texts or calls.</li><li><strong>My Approach:</strong> I designed a friendly mobile layout. I used soft, rounded edges to make it feel welcoming, and picked distinct light colors to help users easily tell apart the salon dash from the client view.</li><li><strong>User Flow:</strong> Search on the map &rarr; Look at styles &rarr; Pick a time &rarr; Book with one tap.</li></ul>',
+        link: 'https://glamex.vercel.app/',
         image: '/public/glamease.png'
       },
       {
-        title: 'EAVI College Website',
-        description: 'A professional college website built using WordPress and managed through cPanel for content management and hosting.',
-        link: '#',
-        image: '/public/glamease.png'
+        title: 'UEAB Research Grants',
+        description: 'A proposed application system for the University of Eastern Africa, Baraton, streamlining the submission and evaluation of research grants.',
+        uiuxDescription: '<ul><li><strong>Problem:</strong> Academic grant forms are usually huge walls of text that cause people to make mistakes.</li><li><strong>My Approach:</strong> I broke the long form into easy, smaller steps. I used clean, formal blue colors and sharp button edges because it makes the system look official and trustworthy for a university.</li><li><strong>User Flow:</strong> Open dashboard &rarr; Fill one step at a time &rarr; See progress bar &rarr; Submit safely.</li></ul>',
+        link: 'https://ueab-research.vercel.app/',
+        image: '/public/ueab-research.png'
       },
       {
         title: 'Older Persons Cash Transfer (OPCT)',
         description: 'A mockup for a Kenyan Older Persons Cash Transfer application system, streamlining social welfare payments.',
+        uiuxDescription: '<ul><li><strong>Problem:</strong> Most digital apps are too hard for older people to read or tap accurately.</li><li><strong>My Approach:</strong> I designed this specifically for the elderly. I used huge text for easy reading, very bright colors so things pop clearly, and big pill-shaped buttons so they don\'t miss when tapping.</li><li><strong>User Flow:</strong> Secure login &rarr; Read big balance numbers &rarr; Tap giant button to send cash.</li></ul>',
         link: 'https://opct-ts.vercel.app/',
         image: '/public/opct.png'
-      },
-      {
-        title: 'UEAB Innovations Week',
-        description: 'A proposed application system for the University of Eastern Africa, Baraton’s Innovations Week, showcasing student projects and events.',
-        link: 'https://ueabinnovation.vercel.app/',
-        image: '/public/ueab-innovation.png'
       }
     ];
 
@@ -166,12 +170,24 @@ document.addEventListener('DOMContentLoaded', () => {
     projects.forEach(project => {
       const template = document.getElementById('project-card-template').content;
       const clone = template.cloneNode(true);
+      
+      // Update front details
       clone.querySelector('.project-card__image').src = project.image;
       clone.querySelector('.project-card__image').alt = `${project.title} screenshot`;
       clone.querySelector('.project-card__title').textContent = project.title;
       clone.querySelector('.project-card__description').textContent = project.description;
-      clone.querySelector('.project-card__link').href = project.link;
-      clone.querySelector('.project-card__link').setAttribute('rel', 'noopener noreferrer');
+      
+      // Update back details
+      const uiuxDesc = clone.querySelector('.project-card__uiux-description');
+      if (uiuxDesc) uiuxDesc.innerHTML = project.uiuxDescription;
+      
+      // Assign links to both buttons
+      const links = clone.querySelectorAll('.project-card__link');
+      links.forEach(link => {
+        link.href = project.link;
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+      
       projectsGrid.appendChild(clone);
     });
   }

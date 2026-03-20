@@ -49,77 +49,69 @@
     </footer>
   </template>
 
+  <!-- Reusable Project Card Template -->
+  <template id="project-card-template">
+    <div class="project-card">
+      <div class="project-card__inner">
+        <!-- Front side -->
+        <div class="project-card__front">
+          <div class="project-card__image-wrapper">
+            <img class="project-card__image" src="" alt="">
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title"></h3>
+            <p class="project-card__description"></p>
+            <a class="project-card__link" href="" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+        
+        <!-- Back side (UI/UX details) -->
+        <div class="project-card__back">
+          <div class="project-card__content project-card__content--back">
+            <h3 class="project-card__title project-card__title--back">UI/UX Approach</h3>
+            <p class="project-card__uiux-description"></p>
+            <a class="project-card__link" href="" target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
   <div id="navbar-root"></div>
 
   <!-- Projects Section -->
   <section class="projects">
     <h2 class="section__title">My Projects</h2>
     <div class="projects__grid">
-      <!-- Project 1: Glamease -->
-      <div class="project-card">
-        <div class="project-card__inner">
-          <div class="project-card__front">
-            <img class="project-card__image" src="./public/glamease.png" alt="Glamease Beauty Service Platform">
-            <h3 class="project-card__title">Glamease</h3>
-            <p class="project-card__description">Senior project system connecting beauty service providers to clients</p>
-            <a class="project-card__link" href="https://glamex.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
-          <div class="project-card__back">
-            <h3 class="project-card__title">Glamease</h3>
-            <p class="project-card__description">A comprehensive platform currently in development that bridges the gap between beauty service providers and clients. This senior project focuses on creating seamless connections in the beauty industry through innovative technology solutions.</p>
-            <a class="project-card__link" href="https://glamex.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
+      <!-- Project cards will be injected here dynamically by index.js -->
+    </div>
+  </section>
+
+  <!-- UI/UX Showcase Section -->
+  <section class="ui-ux-portfolio">
+    <h2 class="section__title">UI/UX Portfolio</h2>
+    <div class="ui-ux__grid">
+      <div class="pdf-card">
+        <div class="pdf-card__preview">
+          <!-- The iframe accurately displays the PDF, the overlay catches clicks to open it fully -->
+          <iframe src="./public/Ticket%20Management%20System.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" scrolling="no"></iframe>
+          <a href="./public/Ticket Management System.pdf" target="_blank" rel="noopener noreferrer" class="pdf-card__overlay" title="Open Designs"></a>
+        </div>
+        <div class="pdf-card__content">
+          <h3 class="pdf-card__title">Ticket Management System</h3>
+          <p class="pdf-card__description">High-fidelity user interface layouts, structured component logic, and optimized digital experience flows.</p>
+          <a class="project-card__link" href="./public/Ticket Management System.pdf" target="_blank" rel="noopener noreferrer">View Designs</a>
         </div>
       </div>
-
-      <!-- Project 2: Productivity PWA -->
-      <div class="project-card">
-        <div class="project-card__inner">
-          <div class="project-card__front">
-            <img class="project-card__image" src="./public/prod365.png" alt="Productivity PWA">
-            <h3 class="project-card__title">Productivity PWA</h3>
-            <p class="project-card__description">A productivity app to track habit growth and projects in progress</p>
-            <a class="project-card__link" href="https://prod365.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
-          <div class="project-card__back">
-            <h3 class="project-card__title">Productivity PWA</h3>
-            <p class="project-card__description">A dual-purpose platform that synchronizes daily behavioral consistency with structured milestones to accelerate long-term goal achievement.</p>
-            <a class="project-card__link" href="https://prod365.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
+      <div class="pdf-card">
+        <div class="pdf-card__preview">
+          <iframe src="./public/Glamease.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" scrolling="no"></iframe>
+          <a href="./public/Glamease.pdf" target="_blank" rel="noopener noreferrer" class="pdf-card__overlay" title="Open Designs"></a>
         </div>
-      </div>
-
-      <!-- Project 3: OPCT -->
-      <div class="project-card">
-        <div class="project-card__inner">
-          <div class="project-card__front">
-            <img class="project-card__image" src="./public/opct.png" alt="OPCT Cash Transfer Application">
-            <h3 class="project-card__title">OPCT</h3>
-            <p class="project-card__description">Cash transfer application mockup for elderly under InuaJamii Program</p>
-            <a class="project-card__link" href="https://opct-ts.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
-          <div class="project-card__back">
-            <h3 class="project-card__title">OPCT</h3>
-            <p class="project-card__description">A specialized cash transfer application mockup designed specifically for elderly beneficiaries of Kenya's InuaJamii Program. This project focuses on creating an accessible and user-friendly interface for senior citizens to manage their social protection benefits.</p>
-            <a class="project-card__link" href="https://opct-ts.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4: UEAB Innovations Week -->
-      <div class="project-card">
-        <div class="project-card__inner">
-          <div class="project-card__front">
-            <img class="project-card__image" src="./public/ueab-innovation.png" alt="UEAB Innovations Application System">
-            <h3 class="project-card__title">UEAB Innovations</h3>
-            <p class="project-card__description">Proposed application system for UEAB Innovation showcase events</p>
-            <a class="project-card__link" href="https://ueabinnovation.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
-          <div class="project-card__back">
-            <h3 class="project-card__title">UEAB Innovations</h3>
-            <p class="project-card__description">A comprehensive application system proposal for the University of Eastern Africa, Baraton's Innovation Week. This project aims to streamline the submission, evaluation, and showcase process for innovative student and faculty projects during the annual innovation events.</p>
-            <a class="project-card__link" href="https://ueabinnovation.vercel.app/" target="_blank" rel="noopener noreferrer">View Project</a>
-          </div>
+        <div class="pdf-card__content">
+          <h3 class="pdf-card__title">Glamease Platform Design</h3>
+          <p class="pdf-card__description">Comprehensive application interface logic, scalable typography hierarchies, and cohesive design components.</p>
+          <a class="project-card__link" href="./public/Glamease.pdf" target="_blank" rel="noopener noreferrer">View Designs</a>
         </div>
       </div>
     </div>
