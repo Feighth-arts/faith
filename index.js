@@ -191,4 +191,62 @@ document.addEventListener('DOMContentLoaded', () => {
       projectsGrid.appendChild(clone);
     });
   }
+
+  // Graphic Design Masonry Lightbox
+  const lightbox     = document.getElementById('gd-lightbox');
+  const lightboxImg  = document.getElementById('gd-lightbox-img');
+  const closeBtn     = document.getElementById('gd-lightbox-close');
+  const prevBtn      = document.getElementById('gd-lightbox-prev');
+  const nextBtn      = document.getElementById('gd-lightbox-next');
+
+  if (lightbox) {
+    const gdItems = Array.from(document.querySelectorAll('.gd-masonry__img'));
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      lightboxImg.src = gdItems[currentIndex].src;
+      lightboxImg.alt = gdItems[currentIndex].alt;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + gdItems.length) % gdItems.length;
+      lightboxImg.src = gdItems[currentIndex].src;
+      lightboxImg.alt = gdItems[currentIndex].alt;
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % gdItems.length;
+      lightboxImg.src = gdItems[currentIndex].src;
+      lightboxImg.alt = gdItems[currentIndex].alt;
+    }
+
+    gdItems.forEach((img, i) => {
+      img.parentElement.addEventListener('click', () => openLightbox(i));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowLeft')   showPrev();
+      if (e.key === 'ArrowRight')  showNext();
+    });
+  }
 });
